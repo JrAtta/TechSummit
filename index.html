@@ -3,9 +3,2001 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechSummit 2026</title>
+     <title>TechSummit 2026 - Innovation & Beyond</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
-    
+
+        <!-- Header -->
+    <header class="text-white p-4 md:p-5 shadow-md sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <svg
+            class="w-8 h-8 text-white mr-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+            ></path>
+          </svg>
+          <h1 class="text-2xl font-bold">TechSummit 2026</h1>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="#home" class="nav-link font-medium">Home</a>
+          <a href="#speakers" class="nav-link font-medium">Speakers</a>
+          <a href="#schedule" class="nav-link font-medium">Schedule</a>
+          <a href="#register" class="nav-link font-medium">Register</a>
+          <button
+            class="bg-white text-indigo-700 px-5 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition"
+          >
+            Get Tickets
+          </button>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobileMenuBtn"
+          class="md:hidden flex items-center text-white focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden w-full mt-4 transition-all duration-300 ease-in-out"
+      >
+        <div class="container mx-auto flex flex-col space-y-4 pb-4">
+          <a
+            href="#home"
+            class="text-white hover:text-indigo-200 transition-colors font-medium"
+            >Home</a
+          >
+          <a
+            href="#speakers"
+            class="text-white hover:text-indigo-200 transition-colors font-medium"
+            >Speakers</a
+          >
+          <a
+            href="#schedule"
+            class="text-white hover:text-indigo-200 transition-colors font-medium"
+            >Schedule</a
+          >
+          <a
+            href="#register"
+            class="text-white hover:text-indigo-200 transition-colors font-medium"
+            >Register</a
+          >
+          <a
+            href="#"
+            class="bg-white text-indigo-700 px-4 py-2 rounded-lg font-semibold text-center"
+            >Get Tickets</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section with Countdown -->
+    <section
+      id="home"
+      class="hero-section text-white py-16 md:py-32 flex items-center"
+    >
+      <div class="container mx-auto px-6 md:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1
+            class="text-4xl md:text-6xl font-bold mb-4 tracking-tight slide-in"
+          >
+            TechSummit 2026
+          </h1>
+          <p
+            class="text-xl md:text-2xl text-gray-200 mb-6 md:mb-8 slide-in"
+            style="animation-delay: 0.1s"
+          >
+            Where Innovation Meets Opportunity
+          </p>
+          <p
+            class="text-lg md:text-xl text-gray-300 mb-8 md:mb-12 slide-in"
+            style="animation-delay: 0.2s"
+          >
+            July 15-18, 2026 • San Francisco Tech Center
+          </p>
+
+          <!-- Countdown Timer -->
+          <div
+            class="countdown-box rounded-xl p-6 mb-10 max-w-2xl mx-auto slide-in"
+            style="animation-delay: 0.3s"
+          >
+            <p class="text-lg mb-4">Event Starts In:</p>
+            <div class="flex justify-center space-x-4 md:space-x-8">
+              <div class="text-center">
+                <div
+                  id="days"
+                  class="text-3xl md:text-5xl font-bold text-white"
+                >
+                  00
+                </div>
+                <div class="text-xs md:text-sm mt-1 text-gray-300">Days</div>
+              </div>
+              <div class="text-center">
+                <div
+                  id="hours"
+                  class="text-3xl md:text-5xl font-bold text-white"
+                >
+                  00
+                </div>
+                <div class="text-xs md:text-sm mt-1 text-gray-300">Hours</div>
+              </div>
+              <div class="text-center">
+                <div
+                  id="minutes"
+                  class="text-3xl md:text-5xl font-bold text-white"
+                >
+                  00
+                </div>
+                <div class="text-xs md:text-sm mt-1 text-gray-300">Minutes</div>
+              </div>
+              <div class="text-center">
+                <div
+                  id="seconds"
+                  class="text-3xl md:text-5xl font-bold text-white"
+                >
+                  00
+                </div>
+                <div class="text-xs md:text-sm mt-1 text-gray-300">Seconds</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div
+            class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 slide-in"
+            style="animation-delay: 0.4s"
+          >
+            <a
+              href="#register"
+              class="gradient-btn text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg"
+              >Register Now</a
+            >
+            <a
+              href="#schedule"
+              class="bg-white text-indigo-700 px-8 py-3 rounded-lg font-semibold text-lg shadow-lg hover:bg-opacity-90 transition"
+              >View Schedule</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rotating Banner for Event Highlights -->
+    <section class="py-8 bg-white">
+      <div class="container mx-auto">
+        <div class="relative overflow-hidden h-20">
+          <div id="banner-container" class="absolute w-full">
+            <div
+              class="banner-item slide-1 text-center py-4 px-6 bg-gradient-to-r from-purple-50 to-indigo-50 opacity-100"
+            >
+              <span class="font-semibold text-indigo-700"
+                >🔥 Keynote: AI Revolution Unveiled</span
+              >
+              <span class="ml- / text-gray-700"
+                >Dr. Sarah Johnson on July 15</span
+              >
+            </div>
+            <div
+              class="banner-item slide-2 text-center py-4 px-6 bg-gradient-to-r from-purple-50 to-indigo-50 opacity-0 absolute top-0 w-full"
+            >
+              <span class="font-semibold text-indigo-700"
+                >🌟 Workshop: Quantum Computing</span
+              >
+              <span class="ml-2 text-gray-700"
+                >Hands-on session with Prof. Michael Chen</span
+              >
+            </div>
+            <div
+              class="banner-item slide-3 text-center py-4 px-6 bg-gradient-to-r from-purple-50 to-indigo-50 opacity-0 absolute top-0 w-full"
+            >
+              <span class="font-semibold text-indigo-700"
+                >📱 Networking Event</span
+              >
+              <span class="ml-2 text-gray-700"
+                >Startup Showcase on July 15 evening</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Speakers Section -->
+    <section id="speakers" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6 md:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Featured Speakers
+          </h2>
+          <div class="w-24 h-1 bg-indigo-500 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Learn from the industry's brightest minds and leading innovators in
+            technology.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Speaker 1 -->
+          <div
+            class="speaker-card bg-white rounded-xl shadow-md overflow-hidden"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=300&q=80"
+                alt="AI Technology"
+                class="w-full h-56 object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 px-6 py-3 bg-gradient-to-t from-black to-transparent"
+              >
+                <p class="text-white text-lg font-semibold">
+                  Artificial Intelligence
+                </p>
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <div class="relative -mt-16 mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&h=120&q=80"
+                  alt="Dr. Sarah Johnson"
+                  class="speaker-img w-24 h-24 rounded-full mx-auto object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">
+                Dr. Sarah Johnson
+              </h3>
+              <p class="text-indigo-600 font-medium mb-3">
+                AI Research Director, TechCorp
+              </p>
+              <p class="text-gray-600 mb-4">
+                Leading researcher in explainable AI and ethical machine
+                learning systems.
+              </p>
+              <div class="flex justify-center space-x-3">
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-indigo-600 transition"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3Channel.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-indigo-600 transition"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.056 10.056 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-indigo-600 transition"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 2 -->
+          <div
+            class="speaker-card bg-white rounded-xl shadow-md overflow-hidden"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=300&q=80"
+                alt="Quantum Computing"
+                class="w-full h-56 object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 px-6 py-3 bg-gradient-to-t from-black to-transparent"
+              >
+                <p class="text-white text-lg font-semibold">
+                  Quantum Computing
+                </p>
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <div class="relative -mt-16 mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&h=120&q=80"
+                  alt="Prof. Michael Chen"
+                  class="speaker-img w-24 h-24 rounded-full mx-auto object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">
+                Prof. Michael Chen
+              </h3>
+              <p class="text-indigo-600 font-medium mb-3">
+                Quantum Research Lead, QuantumWave
+              </p>
+              <p class="text-gray-600 mb-4">
+                Pioneer in quantum algorithms and quantum-resistant cryptography
+                systems.
+              </p>
+              <div class="flex justify-center space-x-3">
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-indigo-600 transition"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-indigo-600 transition"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.056 10.056 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-indigo-600 transition"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaker 3 -->
+          <div
+            class="speaker-card bg-white rounded-xl shadow-md overflow-hidden"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Cybersecurity"
+                class="w-full h-56 object-cover"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 px-6 py-3 bg-gradient-to-t from-black to-transparent"
+              >
+                <p class="text-white text-lg font-semibold">Cybersecurity</p>
+              </div>
+            </div>
+            <div class="p-6 text-center">
+              <div class="relative -mt-16 mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&h=120&q=80"
+                  alt="Alicia Rodriguez"
+                  class="speaker-img w-24 h-24 rounded-full mx-auto object-cover"
+                />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-1">
+                Alicia Rodriguez
+              </h3>
+              <p class="text-indigo-600 font-medium mb-3">
+                CISO, Global Security Alliance
+              </p>
+              <p class="text-gray-600 mb-4">
+                Expert in zero-trust architectures and emerging threats in
+                enterprise security.
+              </p>
+              <div class="flex justify-center space-x-3">
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-indigo-600 transition"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-indigo-600 transition"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.056 10.056 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="text-gray-500 hover:text-indigo-600 transition"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-16 bg-white">
+      <div class="container mx-auto px-6 md:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Event Schedule
+          </h2>
+          <div class="w-24 h-1 bg-indigo-500 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Customize your TechSummit experience with four days of keynotes,
+            workshops, and networking opportunities.
+          </p>
+        </div>
+
+        <!-- Schedule Tabs -->
+        <div class="mb-10">
+          <div
+            class="flex flex-wrap justify-center border-b border-gray-200 mb-8"
+          >
+            <button
+              id="day1-tab"
+              class="day-tab px-6 py-3 text-indigo-600 border-b-2 border-indigo-600 font-medium"
+            >
+              Day 1: July 15
+            </button>
+            <button
+              id="day2-tab"
+              class="day-tab px-6 py-3 text-gray-500 hover:text-indigo-600 font-medium"
+            >
+              Day 2: July 16
+            </button>
+            <button
+              id="day3-tab"
+              class="day-tab px-6 py-3 text-gray-500 hover:text-indigo-600 font-medium"
+            >
+              Day 3: July 17
+            </button>
+            <button
+              id="day4-tab"
+              class="day-tab px-6 py-3 text-gray-500 hover:text-indigo-600 font-medium"
+            >
+              Day 4: July 18
+            </button>
+          </div>
+
+          <!-- Day 1 Schedule -->
+          <div id="day1-content" class="day-content block">
+            <!-- Morning Section -->
+            <div class="schedule-section bg-gray-50 rounded-lg p-6 md:hidden">
+              <div
+                class="collapsible-header flex justify-between items-center p-4 bg-white rounded-lg shadow-sm"
+              >
+                <h3 class="text-xl font-semibold text-indigo-700">
+                  Morning Sessions
+                </h3>
+                <svg
+                  class="w-6 h-6 text-indigo-600 transform transition-transform collapsible-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="collapsible-content space-y-4 mt-4">
+                <!-- Event 1 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">08:30 AM</span>
+                    <span class="text-sm">60 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Registration & Breakfast
+                      </h4>
+                      <span
+                        class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >All Attendees</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Get your conference badge, enjoy breakfast, and meet
+                      fellow attendees.
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Location: Main Conference Hall
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">09:30 AM</span>
+                    <span class="text-sm">45 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Opening Keynote: The Future of Technology
+                      </h4>
+                      <span
+                        class="bg-indigo-100 text-indigo-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >Keynote</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Join our CEO for an inspiring vision of the technology
+                      landscape in 2026 and beyond.
+                    </p>
+                    <div class="flex items-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&h=40&q=80"
+                        alt="Speaker"
+                        class="w-10 h-10 rounded-full mr-3"
+                      />
+                      <div>
+                        <p class="text-gray-900 font-medium">James Williams</p>
+                        <p class="text-sm text-gray-500">
+                          CEO, TechSummit Global
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">10:30 AM</span>
+                    <span class="text-sm">90 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Panel Discussion: AI Ethics in Practice
+                      </h4>
+                      <span
+                        class="bg-purple-100 text-purple-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >Panel</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Industry leaders discuss real-world applications of AI
+                      ethics and responsible innovation.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-3">
+                      <div class="flex items-center">
+                        <img
+                          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&h=40&q=80"
+                          alt="Speaker"
+                          class="w-8 h-8 rounded-full mr-2"
+                        />
+                        <p class="text-sm text-gray-500">Dr. Sarah Johnson</p>
+                      </div>
+                      <div class="flex items-center">
+                        <img
+                          src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&h=40&q=80"
+                          alt="Speaker"
+                          class="w-8 h-8 rounded-full mr-2"
+                        />
+                        <p class="text-sm text-gray-500">Prof. Robert Chen</p>
+                      </div>
+                      <div class="flex items-center">
+                        <img
+                          src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&h=40&q=80"
+                          alt="Speaker"
+                          class="w-8 h-8 rounded-full mr-2"
+                        />
+                        <p class="text-sm text-gray-500">Maria Garcia, Ph.D.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="schedule-section bg-gray-50 rounded-lg p-6 hidden md:block"
+            >
+              <h3 class="text-xl font-semibold text-indigo-700 mb-4">
+                Morning Sessions
+              </h3>
+              <div class="space-y-4">
+                <!-- Event 1 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">08:30 AM</span>
+                    <span class="text-sm">60 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Registration & Breakfast
+                      </h4>
+                      <span
+                        class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >All Attendees</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Get your conference badge, enjoy breakfast, and meet
+                      fellow attendees.
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Location: Main Conference Hall
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">09:30 AM</span>
+                    <span class="text-sm">45 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Opening Keynote: The Future of Technology
+                      </h4>
+                      <span
+                        class="bg-indigo-100 text-indigo-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >Keynote</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Join our CEO for an inspiring vision of the technology
+                      landscape in 2026 and beyond.
+                    </p>
+                    <div class="flex items-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&h=40&q=80"
+                        alt="Speaker"
+                        class="w-10 h-10 rounded-full mr-3"
+                      />
+                      <div>
+                        <p class="text-gray-900 font-medium">James Williams</p>
+                        <p class="text-sm text-gray-500">
+                          CEO, TechSummit Global
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">10:30 AM</span>
+                    <span class="text-sm">90 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Panel Discussion: AI Ethics in Practice
+                      </h4>
+                      <span
+                        class="bg-purple-100 text-purple-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >Panel</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Industry leaders discuss real-world applications of AI
+                      ethics and responsible innovation.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-3">
+                      <div class="flex items-center">
+                        <img
+                          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&h=40&q=80"
+                          alt="Speaker"
+                          class="w-8 h-8 rounded-full mr-2"
+                        />
+                        <p class="text-sm text-gray-500">Dr. Sarah Johnson</p>
+                      </div>
+                      <div class="flex items-center">
+                        <img
+                          src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&h=40&q=80"
+                          alt="Speaker"
+                          class="w-8 h-8 rounded-full mr-2"
+                        />
+                        <p class="text-sm text-gray-500">Prof. Robert Chen</p>
+                      </div>
+                      <div class="flex items-center">
+                        <img
+                          src="https://media.istockphoto.com/id/1497397213/photo/portrait-asian-malay-woman-with-hijab-looking-at-camera-smiling-standing-in-front-of-blue-wall.webp?a=1&b=1&s=612x612&w=0&k=20&c=u1c_bXsSFdqkdOpOw13KUd8punHl9DFHYisL7RjAahA="
+                          alt="Speaker"
+                          class="w-8 h-8 rounded-full mr-2"
+                        />
+                        <p class="text-sm text-gray-500">Maria Garcia, Ph.D.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Afternoon Section -->
+            <div class="schedule-section bg-gray-50 rounded-lg p-6 md:hidden">
+              <div
+                class="collapsible-header flex justify-between items-center p-4 bg-white rounded-lg shadow-sm"
+              >
+                <h3 class="text-xl font-semibold text-indigo-700">
+                  Afternoon Sessions
+                </h3>
+                <svg
+                  class="w-6 h-6 text-indigo-600 transform transition-transform collapsible-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="collapsible-content space-y-4 mt-4">
+                <!-- Event 4 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">12:00 PM</span>
+                    <span class="text-sm">60 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Networking Lunch
+                      </h4>
+                      <span
+                        class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >All Attendees</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Enjoy a catered lunch while networking with speakers and
+                      attendees.
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Location: Dining Pavilion
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">01:30 PM</span>
+                    <span class="text-sm">120 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Workshop: Practical Quantum Computing
+                      </h4>
+                      <span
+                        class="bg-yellow-100 text-yellow-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >Workshop</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Hands-on session exploring quantum algorithms for
+                      optimization problems. Bring your laptop!
+                    </p>
+                    <div class="flex items-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&h=40&q=80"
+                        alt="Speaker"
+                        class="w-10 h-10 rounded-full mr-3"
+                      />
+                      <div>
+                        <p class="text-gray-900 font-medium">
+                          Prof. Michael Chen
+                        </p>
+                        <p class="text-sm text-gray-500">
+                          Quantum Research Lead
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">04:00 PM</span>
+                    <span class="text-sm">60 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Startup Showcase & Networking
+                      </h4>
+                      <span
+                        class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >Networking</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Meet innovative startups showcasing new technologies.
+                      Refreshments provided.
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Location: Innovation Hub
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="schedule-section bg-gray-50 rounded-lg p-6 hidden md:block"
+            >
+              <h3 class="text-xl font-semibold text-indigo-700 mb-4">
+                Afternoon Sessions
+              </h3>
+              <div class="space-y-4">
+                <!-- Event 4 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">12:00 PM</span>
+                    <span class="text-sm">60 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Networking Lunch
+                      </h4>
+                      <span
+                        class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >All Attendees</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Enjoy a catered lunch while networking with speakers and
+                      attendees.
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Location: Dining Pavilion
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">01:30 PM</span>
+                    <span class="text-sm">120 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Workshop: Practical Quantum Computing
+                      </h4>
+                      <span
+                        class="bg-yellow-100 text-yellow-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >Workshop</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Hands-on session exploring quantum algorithms for
+                      optimization problems. Bring your laptop!
+                    </p>
+                    <div class="flex items-center">
+                      <img
+                        src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=40&h=40&q=80"
+                        alt="Speaker"
+                        class="w-10 h-10 rounded-full mr-3"
+                      />
+                      <div>
+                        <p class="text-gray-900 font-medium">
+                          Prof. Michael Chen
+                        </p>
+                        <p class="text-sm text-gray-500">
+                          Quantum Research Lead
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">04:00 PM</span>
+                    <span class="text-sm">60 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Startup Showcase & Networking
+                      </h4>
+                      <span
+                        class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >Networking</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Meet innovative startups showcasing new technologies.
+                      Refreshments provided.
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Location: Innovation Hub
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Evening Section -->
+            <div class="schedule-section bg-gray-50 rounded-lg p-6 md:hidden">
+              <div
+                class="collapsible-header flex justify-between items-center p-4 bg-white rounded-lg shadow-sm"
+              >
+                <h3 class="text-xl font-semibold text-indigo-700">
+                  Evening Events
+                </h3>
+                <svg
+                  class="w-6 h-6 text-indigo-600 transform transition-transform collapsible-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </div>
+              <div class="collapsible-content space-y-4 mt-4">
+                <!-- Event 7 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">06:30 PM</span>
+                    <span class="text-sm">180 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Welcome Reception
+                      </h4>
+                      <span
+                        class="bg-pink-100 text-pink-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >Social</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Join us for drinks, hors d'oeuvres, and live music as we
+                      kick off TechSummit 2026.
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Location: City View Terrace
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="schedule-section bg-gray-50 rounded-lg p-6 hidden md:block"
+            >
+              <h3 class="text-xl font-semibold text-indigo-700 mb-4">
+                Evening Events
+              </h3>
+              <div class="space-y-4">
+                <!-- Event 7 -->
+                <div
+                  class="schedule-card flex flex-col md:flex-row bg-white rounded-lg border border-gray-200 overflow-hidden transition duration-300"
+                >
+                  <div
+                    class="bg-indigo-100 text-indigo-700 p-4 md:p-6 flex flex-row md:flex-col justify-between md:justify-start text-center md:text-left md:min-w-[150px]"
+                  >
+                    <span class="text-lg font-bold">06:30 PM</span>
+                    <span class="text-sm">180 min</span>
+                  </div>
+                  <div class="p-6">
+                    <div
+                      class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3"
+                    >
+                      <h4 class="text-lg font-semibold text-gray-900">
+                        Welcome Reception
+                      </h4>
+                      <span
+                        class="bg-pink-100 text-pink-800 text-xs font-medium px-3 py-1 rounded-full"
+                        >Social</span
+                      >
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                      Join us for drinks, hors d'oeuvres, and live music as we
+                      kick off TechSummit 2026.
+                    </p>
+                    <p class="text-sm text-gray-500">
+                      Location: City View Terrace
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 2 Content -->
+          <div id="day2-content" class="day-content hidden">
+            <div class="flex justify-center items-center">
+              <div class="text-center p-10">
+                <p class="text-gray-600 mb-4">
+                  Day 2 is packed with technical deep dives, hands-on workshops,
+                  and industry-specific tracks.
+                </p>
+                <button
+                  class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
+                >
+                  View Full Day 2 Schedule
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 3 Content -->
+          <div id="day3-content" class="day-content hidden">
+            <div class="flex justify-center items-center">
+              <div class="text-center p-10">
+                <p class="text-gray-600 mb-4">
+                  Day 3 features career development sessions, certification
+                  opportunities, and our legendary hackathon.
+                </p>
+                <button
+                  class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
+                >
+                  View Full Day 3 Schedule
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 4 Content -->
+          <div id="day4-content" class="day-content hidden">
+            <div class="flex justify-center items-center">
+              <div class="text-center p-10">
+                <p class="text-gray-600 mb-4">
+                  Our final day includes closing keynotes, award ceremonies, and
+                  exclusive networking events.
+                </p>
+                <button
+                  class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
+                >
+                  View Full Day 4 Schedule
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Download Schedule Button -->
+        <div id="downloadBtn" class="mt-10 text-center">
+          <button
+            class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition shadow-md"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
+            </svg>
+            <span>Download Full Schedule (PDF)</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration & Pricing Section -->
+    <section id="register" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-6 md:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Register Now
+          </h2>
+          <div class="w-24 h-1 bg-indigo-500 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Secure your spot at the technology conference of the year. Early
+            registration ensures you get access to the workshops of your choice.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <!-- Ticket Type 1 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-8 text-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Standard Pass
+              </h3>
+              <div class="text-indigo-600 font-bold text-4xl my-4">$599</div>
+              <p class="text-gray-600 mb-6">
+                Perfect for professionals looking to stay updated with the
+                latest tech trends.
+              </p>
+              <ul class="text-left space-y-3 mb-8">
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700">Access to all keynotes</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >General sessions & panel discussions</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700">Expo hall access</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >Breakfast & lunch on all days</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >Welcome reception attendance</span
+                  >
+                </li>
+              </ul>
+              <button
+                class="w-full py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition register-btn"
+                data-ticket="Standard Pass"
+              >
+                Register Now
+              </button>
+            </div>
+          </div>
+
+          <!-- Ticket Type 2 - Featured -->
+          <div
+            class="bg-white rounded-xl shadow-xl transform md:-translate-y-4 overflow-hidden border-2 border-indigo-500"
+          >
+            <div
+              class="bg-indigo-500 text-white py-2 text-center font-semibold"
+            >
+              MOST POPULAR
+            </div>
+            <div class="p-8 text-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Premium Pass
+              </h3>
+              <div class="text-indigo-600 font-bold text-4xl my-4">$999</div>
+              <p class="text-gray-600 mb-6">
+                Ideal for those seeking exclusive access and hands-on learning.
+              </p>
+              <ul class="text-left space-y-3 mb-8">
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700">Everything in Standard Pass</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700">Priority workshop access</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700">VIP networking events</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >Exclusive session recordings</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700">Priority seating</span>
+                </li>
+              </ul>
+              <button
+                class="w-full py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition register-btn"
+                data-ticket="Premium Pass"
+              >
+                Register Now
+              </button>
+            </div>
+          </div>
+          <!-- Ticket Type 3 -->
+          <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-8 text-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Student Pass
+              </h3>
+              <div class="text-indigo-600 font-bold text-4xl my-4">$199</div>
+              <p class="text-gray-600 mb-6">
+                Designed for students eager to jumpstart their tech careers.
+              </p>
+              <ul class="text-left space-y-3 mb-8">
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700">Access to all keynotes</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >General sessions & expo hall</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700"
+                    >Career workshops & mentorship sessions</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-green-500 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-700">Student networking events</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    class="w-5 h-5 text-gray-400 mr-2 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                  <span class="text-gray-500 line-through"
+                    >VIP events & recordings</span
+                  >
+                </li>
+              </ul>
+              <button
+                class="w-full py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition register-btn"
+                data-ticket="Student Pass"
+              >
+                Register Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Registration Form -->
+        <div
+          class="bg-white rounded-xl shadow-md p-8 max-w-2xl mx-auto"
+          id="registration-form"
+        >
+          <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+            Complete Your Registration
+          </h3>
+          <form id="regForm">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label
+                  for="firstName"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="lastName"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                  required
+                />
+              </div>
+            </div>
+            <div class="mb-6">
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="ticketType"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Ticket Type</label
+              >
+              <select
+                id="ticketType"
+                name="ticketType"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                required
+              >
+                <option value="" disabled selected>Select a ticket</option>
+                <option value="Standard Pass">Standard Pass - $599</option>
+                <option value="Premium Pass">Premium Pass - $999</option>
+                <option value="Student Pass">Student Pass - $199</option>
+              </select>
+            </div>
+            <div class="mb-6">
+              <label
+                for="organization"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Organization (Optional)</label
+              >
+              <input
+                type="text"
+                id="organization"
+                name="organization"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+              />
+            </div>
+            <button
+              type="submit"
+              class="w-full py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
+            >
+              Submit Registration
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Venue & Logistics Section -->
+    <section id="venue" class="py-16 bg-white">
+      <div class="container mx-auto px-6 md:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Venue & Logistics
+          </h2>
+          <div class="w-24 h-1 bg-indigo-500 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Join us at the heart of innovation in San Francisco for an
+            unforgettable experience.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <!-- Venue Details -->
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              San Francisco Tech Center
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Located in the vibrant Mission District, the San Francisco Tech
+              Center offers state-of-the-art facilities and easy access to
+              public transportation.
+            </p>
+            <p class="text-gray-700 font-medium mb-2">
+              Address:
+              <span class="font-normal"
+                >123 Innovation Way, San Francisco, CA 94103</span
+              >
+            </p>
+            <p class="text-gray-700 font-medium mb-2">
+              Public Transit:
+              <span class="font-normal"
+                >BART (16th St. Mission Station), Muni Bus Lines</span
+              >
+            </p>
+            <p class="text-gray-700 font-medium mb-6">
+              Parking:
+              <span class="font-normal">On-site and nearby lots available</span>
+            </p>
+            <a
+              href="https://maps.google.com"
+              target="_blank"
+              class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
+            >
+              View on Map
+              <svg
+                class="w-5 h-5 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+            </a>
+          </div>
+          <!-- Venue Image -->
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1682336606328-060825eb6bb4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2FuJTIwRnJhbmNpc2NvJTIwVGVjaCUyMENlbnRlcnxlbnwwfHwwfHx8MA%3D%3D"
+              alt="San Francisco Tech Center"
+              class="rounded-xl shadow-md w-full object-cover"
+            />
+          </div>
+        </div>
+        <!-- Accommodation Recommendations -->
+        <div class="mt-12">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">
+            Recommended Accommodations
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Hotel 1 -->
+            <div class="bg-gray-50 rounded-xl p-6 shadow-md">
+              <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                Tech Haven Hotel
+              </h4>
+              <p class="text-gray-600 mb-4">
+                A modern hotel just a 5-minute walk from the venue, offering
+                tech-friendly amenities.
+              </p>
+              <p class="text-gray-700 font-medium mb-2">
+                Rate: <span class="font-normal">$229/night</span>
+              </p>
+              <a
+                href="#"
+                class="text-indigo-600 font-medium hover:text-indigo-800"
+                >Book Now</a
+              >
+            </div>
+            <!-- Hotel 2 -->
+            <div class="bg-gray-50 rounded-xl p-6 shadow-md">
+              <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                Innovation Suites
+              </h4>
+              <p class="text-gray-600 mb-4">
+                Spacious suites with complimentary shuttle service to the Tech
+                Center.
+              </p>
+              <p class="text-gray-700 font-medium mb-2">
+                Rate: <span class="font-normal">$199/night</span>
+              </p>
+              <a
+                href="#"
+                class="text-indigo-600 font-medium hover:text-indigo-800"
+                >Book Now</a
+              >
+            </div>
+            <!-- Hotel 3 -->
+            <div class="bg-gray-50 rounded-xl p-6 shadow-md">
+              <h4 class="text-xl font-semibold text-gray-900 mb-2">
+                Cityscape Inn
+              </h4>
+              <p class="text-gray-600 mb-4">
+                Budget-friendly option with easy access to downtown attractions.
+              </p>
+              <p class="text-gray-700 font-medium mb-2">
+                Rate: <span class="font-normal">$149/night</span>
+              </p>
+              <a
+                href="#"
+                class="text-indigo-600 font-medium hover:text-indigo-800"
+                >Book Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+      <div class="container mx-auto px-6 md:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <!-- About -->
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">
+              About TechSummit
+            </h3>
+            <p class="text-gray-400">
+              TechSummit 2026 is the premier technology conference bringing
+              together innovators, leaders, and enthusiasts to shape the future.
+            </p>
+          </div>
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-indigo-400 transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#speakers"
+                  class="text-gray-400 hover:text-indigo-400 transition"
+                  >Speakers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#schedule"
+                  class="text-gray-400 hover:text-indigo-400 transition"
+                  >Schedule</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#register"
+                  class="text-gray-400 hover:text-indigo-400 transition"
+                  >Register</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#venue"
+                  class="text-gray-400 hover:text-indigo-400 transition"
+                  >Venue</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Contact -->
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Contact Us</h3>
+            <p class="text-gray-400 mb-2">
+              Email:
+              <a
+                href="mailto:info@techsummit2026.com"
+                class="hover:text-indigo-400"
+                >info@techsummit2026.com</a
+              >
+            </p>
+            <p class="text-gray-400 mb-2">
+              Phone:
+              <a href="tel:+1234567890" class="hover:text-indigo-400"
+                >+1 (234) 567-890</a
+              >
+            </p>
+            <p class="text-gray-400">
+              Address: 123 Innovation Way, San Francisco, CA 94103
+            </p>
+          </div>
+          <!-- Social Media -->
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-indigo-400 transition"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-indigo-400 transition"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.056 10.056 0 01-3.127 1.195 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-indigo-400 transition"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p class="text-gray-400">
+            &copy; 2026 TechSummit. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div
+      id="toast"
+      class="toast fixed bottom-8 right-8 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg flex items-center space-x-2"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 13l4 4L19 7"
+        />
+      </svg>
+      <span id="toast-message">Registration successful!</span>
+    </div>
+
 </body>
 </html>
